@@ -37,6 +37,7 @@ def resave_msg(msg):
     file_name = msg['FileName']
     reback_time = msg['CreateTime']
 
+
 @itchat.msg_register([NOTE])
 def backed_msg(ch_msg):
     global types
