@@ -13,7 +13,6 @@ i = 0
 
 @itchat.msg_register(itchat.content.TEXT)
 def get_user_message(msg):
-
     from_username = msg['FromUserName']
     from_content = msg['Text']
     check_flag = from_content.split(' ')[0]
