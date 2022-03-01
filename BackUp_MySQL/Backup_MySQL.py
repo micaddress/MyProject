@@ -1,4 +1,8 @@
 ﻿# encoding='utf-8'
+import datetime
+import BackUp_MySQL.delete_Old_Backup as dob
+import BackUp_MySQL.create_New_Backup as createBK
+import BackUp_MySQL.start_Backup as start_backup
 #########################################################
 #将根目录加入sys.path中,解决命令行找不到包的问题
 import sys
@@ -7,13 +11,8 @@ curPath = os.path.abspath(os.path.dirname(__file__))
 rootPath = os.path.split(curPath)[0]
 sys.path.append(rootPath)
 #########################################################
-import datetime
-import os
-import sys
+
 sys.path.extend(['D:\\workspace\\MyProject\\BackUp_MySQL\\delete_Old_Backup'])
-import BackUp_MySQL.delete_Old_Backup as dob
-import BackUp_MySQL.create_New_Backup as createBK
-import BackUp_MySQL.start_Backup as start_backup
 
 
 def get_backup_mysql():

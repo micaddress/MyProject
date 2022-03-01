@@ -1,1 +1,3 @@
-python get_back_message.py
+@echo off
+call D:\workspace\MyProject\venv\Scripts\activate
+python test.py

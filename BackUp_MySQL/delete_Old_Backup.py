@@ -46,8 +46,6 @@ def delete_all_files(paths):
 #         os.removedirs(paths)
 
 
-
-
 # 删除以前的备份文件
 def delete_old_except7z_backup(base_path, backup_path_list):
     all_path_list = os.listdir(base_path)

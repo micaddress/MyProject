@@ -4,7 +4,6 @@ import os
 from selenium import webdriver as web
 
 
-
 # chrome_exe_path = __file__.split('/')[-1]
 # chrome_exe_path = __file__.split(chrome_exe_path)[0]
 # chrome_exe_path = chrome_exe_path + 'chromedriver.exe'

@@ -1,10 +1,14 @@
 # encoding='utf-8'
+#!venv/Scripts/python.exe
+import shutil
+
 import itchat
 import time
 import os
 from itchat.content import *
 
-itchat.auto_login(hotReload=True)
+
+itchat.auto_login(hotReload=True, enableCmdQR=2)
 friends_list = itchat.get_friends(update=True)
 # itchat.send('Hello,filehelper', toUserName='filehelper')  # 文件传输助手
 
@@ -16,7 +20,7 @@ types = None
 info = None
 file_name = None
 reback_time = None
-
+shutil.copy()
 
 @itchat.msg_register([
                       TEXT,
