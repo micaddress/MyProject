@@ -17,6 +17,12 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='gb18030')
 # result = pattern.sub('', a)
 # print(result)
 
-action_text = 'asda打撒赞同fsdf'
-if '赞同' in action_text:
-    print('赞同' in action_text)
+# action_text = 'asda打撒赞同fsdf'
+# if '赞同' in action_text:
+#     print('赞同' in action_text)
+# a = {'a':'a1','b':'b1'}
+# print(a.get('b'))
+# print(str(a))
+action_text = '关注了话题1'
+if action_text in ['关注了话题','关注了圆桌']:
+    print(1)
