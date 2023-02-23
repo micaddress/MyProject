@@ -1,5 +1,6 @@
 # encoding='utf-8'
-import itchat,re
+import itchat
+import re
 import wechat.get_user_info_DB as userDB
 
 itchat.auto_login(hotReload=True)
@@ -13,7 +14,6 @@ i = 0
 
 @itchat.msg_register(itchat.content.TEXT)
 def get_user_message(msg):
-
     from_username = msg['FromUserName']
     from_content = msg['Text']
     check_flag = from_content.split(' ')[0]
@@ -35,9 +35,12 @@ def get_info_by_phone(phone):
     result = cursor.fetchone()
     if result:
         return '客户名称: ' + result[0] + '\n' + '号码 : ' + str(result[1]) + '\n' + '出生年月 : ' + str(result[2]) + \
-               '\n' + '年龄 : ' + str(result[3]) + '\n' + '第一次来店时间: ' + str(result[4]) + '\n' + '到店次数: ' + str(result[5]) + \
-               '次' + '\n' + '付款时间: ' + str(result[6]) + '\n' + '提车时间: ' + str(result[7]) + '\n' + '曾用车: ' + str(result[8]) + \
-               '\n' + '曾用车价格: ' + str(result[9]) + '\n' + '预购车型: ' + str(result[10]) + '\n' + '预购车型价格: ' + str(result[11]) + \
+               '\n' + '年龄 : ' + str(result[3]) + '\n' + '第一次来店时间: ' + str(result[4]) + '\n' + '到店次数: ' + str(
+            result[5]) + \
+               '次' + '\n' + '付款时间: ' + str(result[6]) + '\n' + '提车时间: ' + str(result[7]) + '\n' + '曾用车: ' + str(
+            result[8]) + \
+               '\n' + '曾用车价格: ' + str(result[9]) + '\n' + '预购车型: ' + str(result[10]) + '\n' + '预购车型价格: ' + str(
+            result[11]) + \
                '\n' + '实提车型: ' + str(result[12]) + '\n' + '实提车价: ' + str(result[13]) + '\n' + '备注: ' + result[14]
     else:
         return None
@@ -75,4 +78,3 @@ def get_right_phone_No(number):
 
 
 itchat.run()
-
