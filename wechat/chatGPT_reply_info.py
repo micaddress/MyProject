@@ -29,7 +29,7 @@ while 1:
 # # reply_username = '@91f00211108e1821f51530e04f29c40293817b5a24a369a35eb395ea178a3446'  # 妈妈
 # reply_username = '@22d0b325219659bf429da0e63c7a1014042ea7cd7b4e71820f01a791f3d505b1'  # PonPon
 # friends_list = itchat.get_friends(update=True)
-# i = 0
+# i = 00
 #
 #
 # @itchat.msg_register(itchat.content.TEXT)
